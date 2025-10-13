@@ -1,0 +1,25 @@
+{
+  "name": "all-in-one-empire-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard ejecutivo para All In One Empire - Ecosistema premium Los Cabos",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 8000 -o",
+    "dev": "http-server -p 8000 -o -c-1",
+    "build": "echo 'No build step required - static files'"
+  },
+  "keywords": [
+    "dashboard",
+    "react",
+    "emprendimiento",
+    "los-cabos",
+    "turismo",
+    "business-plan"
+  ],
+  "author": "All In One Empire",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

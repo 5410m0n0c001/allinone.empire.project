@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="sunGradientFavicon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Círculo central del sol -->
+  <circle cx="16" cy="12" r="8" fill="url(#sunGradientFavicon)"/>
+
+  <!-- Rayos principales -->
+  <g fill="url(#sunGradientFavicon)">
+    <path d="M8,4 L10,6 L6,6 L8,4 Z"/>
+    <path d="M24,4 L26,6 L22,6 L24,4 Z"/>
+    <path d="M4,12 L6,12 L6,14 L4,12 Z"/>
+    <path d="M28,12 L30,12 L30,14 L28,12 Z"/>
+    <path d="M10,20 L12,22 L8,22 L10,20 Z"/>
+    <path d="M22,20 L24,22 L20,22 L22,20 Z"/>
+    <path d="M16,2 L18,4 L14,4 L16,2 Z"/>
+    <path d="M16,26 L18,28 L14,28 L16,26 Z"/>
+  </g>
+
+  <!-- Ondas inferiores -->
+  <g fill="url(#sunGradientFavicon)" opacity="0.7">
+    <path d="M8,22 Q12,18 16,22 T24,22"/>
+    <path d="M6,26 Q10,22 14,26 T22,26"/>
+  </g>
+</svg>
