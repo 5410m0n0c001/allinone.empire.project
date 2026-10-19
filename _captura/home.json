@@ -1,0 +1,28 @@
+{
+  "url": "https://www.allin1cabo.com/",
+  "title": "Cabo San Lucas Yacht rental | Activities | All In One Cabo",
+  "plataforma_original": "Wix",
+  "contacto": {"nombre": "Christian", "tel": "+52 624 137 8636", "email": "allinonecabo@hotmail.com"},
+  "redes": {"youtube": "https://www.youtube.com/channel/UCuaTBNTS0HM_6hDBwZix_Fg", "tiktok": "https://vm.tiktok.com/ZMLxmRR2x/", "facebook": "https://www.facebook.com/allinonecabo/", "instagram": "https://instagram.com/allinonecabo"},
+  "servicios": ["Charters (yates)", "Fishing", "Video Marketing", "Activities", "Transportation", "Real Estate", "Wedding Planner", "Restaurants", "Night Club", "Events", "Private parties", "Golf Rounds"],
+  "paginas": ["/our-services", "/yates", "/fishing", "/videomarketing", "/activities-1", "/transportacion", "/realestatemenu", "/weddingplanner", "/restaurants", "/nightclubs", "/events", "/bachelorandbacheloretteparties", "/golf", "/copia-de-socios", "/copia-de-contact"],
+  "images": [
+    "https://static.wixstatic.com/media/20a7e4_4713cbef6fde4c78a211beaedab34ad0~mv2.png",
+    "https://static.wixstatic.com/media/78aa2057f0cb42fbbaffcbc36280a64a.png",
+    "https://static.wixstatic.com/media/11062b_6e7994bdd94b41178720ff1641a0f323~mv2.png"
+  ],
+  "videos": [
+    "https://video.wixstatic.com/video/20a7e4_01170023cdc74d96945340bbed6364be/1080p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_dd8c43a6c36649dfbbb22cf1e4e3ef31/1080p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_814189f26c5641b5b87fd368cfefbb00/1080p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_51c2bacfa5d2446f89b389b3c3a7c250/480p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_de6527495a2146c4a2dddb231db5bc48/1080p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_4516e0cbb1eb41188d83af5eb6c4d133/1080p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_b58d2e09ea02452e90192dc088893b44/1080p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_3a4133c92cc94740a123c3310db029be/1080p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_a04c21cbacce4e4aa7f03d26ef0df902/720p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_0001ea553c1b405aaf89a63c94d35774/720p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_675083f51447400d8dc92b130ab6bc10/720p/mp4/file.mp4",
+    "https://video.wixstatic.com/video/20a7e4_9122462236fd4e818d4b3950e37262c2/1080p/mp4/file.mp4"
+  ]
+}

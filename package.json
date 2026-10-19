@@ -1,0 +1,22 @@
+{
+  "name": "allin1cabo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js && tailwindcss -i src/input.css -o site/assets/styles.css --minify",
+    "scrape": "node scraper.js",
+    "media": "node media.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.64.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
