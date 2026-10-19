@@ -32,7 +32,10 @@ La mayoría son **fichas individuales de yates** (~50 barcos, cada uno su págin
 - [x] Medios del dueño (`20a7e4_*`) descargados: 614 imgs (1600px) en `site/media/img`; 31 videos como loops de 20s/720p sin audio en `site/media/vid` (originales en `D:\allin1cabo_media\raw`). Total sitio ≈178 MB. Los `11062b_*` son stock de Wix → NO se usan.
 - [x] Sitio construido: `npm run build` (build.js + src/ → site/). 68 páginas: Home, Flota (48 yates con filtro por tamaño), 48 fichas, 14 servicios, Servicios, Contacto, Partners, 404.
 - [x] Formularios → abren WhatsApp con el mensaje prellenado (sin backend).
-- [ ] Repo en GitHub (`5410m0n0c001/allin1cabo`) + GitHub Pages.
+- [x] **EN VIVO: https://5410m0n0c001.github.io/allinone.empire.project/** (repo `5410m0n0c001/allinone.empire.project`).
+  - Rama `main` = solo el sitio generado (lo que sirve Pages). Rama `source` = este repo (generador, scraper, contexto).
+  - El repo antes tenía el "All In One Empire – Dashboard Ejecutivo" en la raíz; por decisión de Salo se eliminó (recuperable en commit `6fa190d`).
+  - Re-publicar: `npm run build` → copiar `site/.` a la raíz de un worktree de `origin/main` (ej. `D:\allin1cabo_deploy`, rama `deploy`) → commit → `git push origin deploy:main`. Y `git push origin main:source` para el código.
 
 ## Cómo se construye
 - `npm run scrape` → `_captura/catalogo_site.json` · `npm run media` → descarga/comprime medios + `_captura/media_map.json` · `npm run build` → genera HTML + Tailwind compilado (`site/assets/styles.css`).
