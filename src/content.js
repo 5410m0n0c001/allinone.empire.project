@@ -17,7 +17,7 @@ const CONTACT = {
 };
 
 const VIDEO_PERKS = [
-  ['Best drones on the market', 'We fly DJI drones — the best image quality in the drone market.'],
+  ['Best drones on the market', 'We fly DJI drones, the best image quality in the drone market.'],
   ['Photos included', 'Every service includes edited photos, for the same price.'],
   ['Smooth stabilization', 'Gimbals and stabilizers keep every shot smooth and steady.'],
   ['Professional camera crew', 'A specially trained team delivering top-quality video and photos.'],
@@ -37,7 +37,7 @@ const SERVICES = [
     slug: 'video-marketing', src: 'videomarketing', title: 'Video Marketing', short: 'Video Marketing',
     eyebrow: 'Film · Photo · Drone',
     lead: 'Would you like your product to shine like a diamond?',
-    body: ['Your wedding or event remembered in a unique, creative way. Your vacation turned into a treasured video. Leave it to us — we make sure we capture all of the best moments.', 'Are you a local business? We have affordable memberships.'],
+    body: ['Your wedding or event remembered in a unique, creative way. Your vacation turned into a treasured video. Leave it to us: we make sure we capture all of the best moments.', 'Are you a local business? We have affordable memberships.'],
     perks: true,
     testimonial: ['My friends and I had such a fun experience on a yacht we rented! It was really cool to see it on video and we got to show all of my friends and family when I got home from vacation. I only wish we could’ve had the videographers with us during our whole day and night! Thanks, Kurtis and Alex for everything :)', 'Lauren'],
   },
@@ -56,7 +56,7 @@ const SERVICES = [
     slug: 'businesses', src: 'businesses', title: 'Business Campaigns', short: 'Businesses',
     eyebrow: 'Restaurants · Yachts · Hotels',
     lead: 'Whatever business you run, we have you covered.',
-    body: ['Your next advertising campaign: we design it with our creativity, capture the footage, edit it and turn it into eye-catching marketing content. Every package includes drone footage, and we size each video for the platforms you use — Instagram, Facebook, YouTube — plus video and images for your website.'],
+    body: ['Your next advertising campaign: we design it with our creativity, capture the footage, edit it and turn it into eye-catching marketing content. Every package includes drone footage, and we size each video for the platforms you use (Instagram, Facebook, YouTube) plus video and images for your website.'],
     packages: [
       { name: 'Basic', note: '1–2 hours', items: ['5 photos', '10-second ad', '20-second ad', '1-minute video'] },
       { name: 'Premier', note: 'Half day', items: ['10 photos', 'Two 10-second ads', 'Two 20-second ads', '1.5-minute video'] },
@@ -67,26 +67,26 @@ const SERVICES = [
     slug: 'activities', src: 'activities', title: 'Activities & Tours', short: 'Activities',
     eyebrow: 'Land’s End and beyond',
     lead: "You can't leave Cabo without visiting the famous Land's End Arch!",
-    body: ['There are lots of things to do in Cabo: razors, ATVs, camel rides, horseback riding and bicycling — in a mix of mountain, ocean, beach and dune scenery, mostly at Migriño Ranch, home of the second, "not so famous" arch.'],
+    body: ['There are lots of things to do in Cabo: razors, ATVs, camel rides, horseback riding and bicycling, in a mix of mountain, ocean, beach and dune scenery, mostly at Migriño Ranch, home of the second, "not so famous" arch.'],
     sections: [
-      ['Camel ride', 'A unique walk you can only do here: a camel ride along the crystal-clear water and majestic waves of the Pacific. Learn about camel history, anatomy, personality and training — get up close, pet and feed them — then try typical tacos with authentic Mexican sauces.'],
+      ['Camel ride', 'A unique walk you can only do here: a camel ride along the crystal-clear water and majestic waves of the Pacific. Learn about camel history, anatomy, personality and training. Get up close, pet and feed them, then try typical tacos with authentic Mexican sauces.'],
       ['Razor desert tour', 'Explore the Baja California Sur desert on a new Polaris vehicle with an experienced local guide: canyons and mountain trails in a secluded natural area, ideal for couples, families and groups. Helmet and face bandana provided. Includes a visit to the second arch of Cabo San Lucas at Rancho San Cristóbal.'],
       ['Whale watching', 'Cabo is one of the best places in the world to watch whales. From December to April, humpback and gray whales visit the warm waters of the Sea of Cortez to mate, give birth and nurse their young. See them by boat, catamaran, kayak or paddleboard.'],
-      ['Glass-bottom boat', 'A spectacular view of coral reefs, tropical fish and stingrays on the way to the Arch, with views of the beaches and cliffs of Cabo — and the iconic "Window" rock rising from the sea.'],
+      ['Glass-bottom boat', 'A spectacular view of coral reefs, tropical fish and stingrays on the way to the Arch, with views of the beaches and cliffs of Cabo, and the iconic "Window" rock rising from the sea.'],
     ],
   },
   {
     slug: 'transportation', src: 'transportacion', title: 'Private Transportation', short: 'Transportation',
     eyebrow: 'Airport · Hotel · Anywhere',
     lead: 'Need a ride? We have you covered.',
-    body: ['The best way to move around Cabo is in one of our private vehicles. We pick you up anywhere in Cabo San Lucas, San José, La Paz or nearby areas — including airport transportation.'],
+    body: ['The best way to move around Cabo is in one of our private vehicles. We pick you up anywhere in Cabo San Lucas, San José, La Paz or nearby areas, including airport transportation.'],
     features: ['Suburban', 'Van', 'Limousine', 'Airport transfers'],
   },
   {
     slug: 'helicopter', src: 'helicopter', title: 'Helicopter Rides', short: 'Helicopter',
     eyebrow: '2019 Bell 505',
     lead: 'Discover Cabo San Lucas bay like an eagle.',
-    body: ['Fly over Cabo on a helicopter ride with your family — available today. A 2019 Bell 505 meeting the highest standards of service, quality and safety.'],
+    body: ['Fly over Cabo on a helicopter ride with your family, available today. A 2019 Bell 505 meeting the highest standards of service, quality and safety.'],
   },
   {
     slug: 'real-estate', src: 'realestatemenu', title: 'Real Estate & Villas', short: 'Real Estate',
@@ -103,7 +103,7 @@ const SERVICES = [
           ['House rules', ['Check-in after 3 pm · check-out before 11 am', 'Max. 10 overnight guests · min. renting age 26', 'Up to 2 dogs under 20 lb, on request', 'No events · no smoking', 'Full refund if cancelled 60+ days before check-in']],
         ] },
       { name: 'Duara Ocean View Villas & Condos', src: 'duara', kind: 'El Tezal',
-        text: 'A gated community of 90 condos in El Tezal, one of the highest-valued areas of Cabo San Lucas. Comfort luxury: an effortless blend of luxury with casual tropical living — greet the day with a sunrise from an ocean-view kitchen overlooking the Arch.',
+        text: 'A gated community of 90 condos in El Tezal, one of the highest-valued areas of Cabo San Lucas. Comfort luxury: an effortless blend of luxury with casual tropical living. Greet the day with a sunrise from an ocean-view kitchen overlooking the Arch.',
         lists: [
           ['Amenities', ['Concierge & business center', 'Mini market & terraces', 'Fitness area & A/C kids club', 'Adult pool, pool bar & jacuzzi', 'Kids pool, playground, basketball & volleyball']],
           ['Nearby', ['Plaza Novva', 'Trattoria da Pietro', 'Ramen Street', 'Cabo Coffee', 'Cabo Yoga & Fitness']],
@@ -128,20 +128,20 @@ const SERVICES = [
     slug: 'nightclubs', src: 'nightclubs', title: 'Night Clubs', short: 'Night Clubs',
     eyebrow: 'Cabo never sleeps',
     lead: "Let's have some fun.",
-    body: ['Come around at night and the show begins — people dancing outside, having fun with no limits. There are lots of options; we will recommend the best ones and make your reservation so you skip the lines.'],
+    body: ['Come around at night and the show begins: people dancing outside, having fun with no limits. There are lots of options; we will recommend the best ones and make your reservation so you skip the lines.'],
     extraContact: ['Alejandro M.', '+52 744 198 7657'],
   },
   {
     slug: 'events', src: 'events', title: 'Events', short: 'Events',
     eyebrow: 'Birthdays · Concerts · Weddings',
     lead: 'Planning an event? We cover it all.',
-    body: ['We can manage any event with our professional team and equipment — your entire production, from film, microphones and floor cameras to drones and more. Call us to turn your idea into reality.'],
+    body: ['We can manage any event with our professional team and equipment: your entire production, from film, microphones and floor cameras to drones and more. Call us to turn your idea into reality.'],
   },
   {
     slug: 'bachelor-parties', src: 'bachelorandbacheloretteparties', title: 'Bachelor & Bachelorette Parties', short: 'Private Parties',
     eyebrow: 'Before you tie the knot',
     lead: 'Your ultimate party, on a first-class yacht.',
-    body: ['We plan and organize everything: drinks, food, decorations and much more. We also send you digital invitations to share with your friends — and give you a FREE video of your event!'],
+    body: ['We plan and organize everything: drinks, food, decorations and much more. We also send you digital invitations to share with your friends, and give you a FREE video of your event!'],
     features: ['Luxury yacht', 'Drinks & food', 'Decorations', 'Digital invitations', 'Free event video'],
   },
   {

@@ -7,22 +7,24 @@ const TEMPLATE = 'Planing a big party full with guests?';
 
 // Textos propios del dueño, con ortografia corregida.
 const DESC = {
-  'northen-dreams-130': ['Where all the dreams come true — hop on this big luxury yacht.', 'The biggest charter in Cabo San Lucas.'],
+  'northern-dreams-130': ['Where all the dreams come true. Hop on this big luxury yacht.', 'The biggest charter in Cabo San Lucas.'],
   'maranatha-120': ['This incredible yacht brings you a unique experience: explore both oceans, the Sea of Cortez and the Pacific.', 'The interiors and decks of this huge boat will leave you and your guests with an image they will never forget.'],
-  'neoprene-108': ['A unique experience — discover the most stylish luxury yacht in Cabo San Lucas.', 'The only boat of this color and size. 108 ft of pure fun.'],
+  'neoprene-108': ['A unique experience. Discover the most stylish luxury yacht in Cabo San Lucas.', 'The only boat of this color and size. 108 ft of pure fun.'],
   'st-vincent-100': ['If you could describe this yacht in one word, it would be: luxury.', 'It has one of the best interior designs in Cabo San Lucas. Come join us on a new adventure.'],
-  'number-juan-100': ['Number Juan is one of the biggest charter boats in Cabo San Lucas — it even has its own tequila brand.', 'This boat has everything you need for an unforgettable day.'],
+  'number-juan-100': ['Number Juan is one of the biggest charter boats in Cabo San Lucas, and it even has its own tequila brand.', 'This boat has everything you need for an unforgettable day.'],
   'lady-katana-100': ['Ready to have fun? Hop on a super yacht.', 'Lady Katana has lots of spots for awesome pictures and lots of toys to play with.'],
-  'blue-moon-72': ['Planning a big party full of guests? This is the boat you are looking for — it has a big dance floor.', 'Two levels of pure fun, with open bar and food included.'],
+  'blue-moon-72': ['Planning a big party full of guests? This is the boat you are looking for: it has a big dance floor.', 'Two levels of pure fun, with open bar and food included.'],
 };
 
 const COMMON = ['National open bar', 'Food', 'Water mat', '12 snorkeling sets', 'Sea scooters'];
 
-const title = s => s.toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase()).replace(/\bIi\b/, 'II');
+// "NORTHEN" era errata en la pagina: la tarjeta del propio dueño dice "NORTHERN 130 FT".
+const title = s => s.toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase()).replace(/\bIi\b/, 'II').replace(/^Northen\b/, 'Northern');
 const cap = s => s.charAt(0) + s.slice(1).toLowerCase();
 
 function parseYachts(pages, media) {
   const seen = new Set();
+  const owned = new Set(); // cada foto pertenece a la primera ficha donde aparece (Wix copiaba paginas con fotos viejas)
   const out = [];
   for (const p of pages) {
     if (!/copia-de-(?!yates|socios|contact)|services-1/.test(p.url)) continue;
@@ -39,15 +41,20 @@ function parseYachts(pages, media) {
     const a = L.indexOf('INCLUDES:'), g = L.indexOf('GALLERY');
     const inc = L.slice(a + 1, g).map(cap).filter(x => custom || !/bedroom|bathroom/i.test(x));
     const key = p.url.split('/').pop();
-    // La 1a imagen de cada ficha suele ser una tarjeta con el nombre en texto: no sirve recortada.
-    const all = media(key);
-    const images = all.length > 1 ? all.slice(1) : all;
+    // La 1a imagen es la tarjeta del dueño (foto + nombre): su recorte limpio es la portada (media/cover/<key>.webp).
+    const all = media(key).slice(1);
+    const images = all.filter(f => !owned.has(f));
+    all.forEach(f => owned.add(f));
     out.push({
       slug, name, ft,
       tagline: cap(L[i + 2]).replace(/^Luxury at sea$/, 'Luxury at sea'),
       desc: DESC[slug] || [`A ${ft}-ft yacht for private charters in Cabo San Lucas.`, 'Message us for capacity, rates and availability on your dates.'],
       includes: custom ? inc.map(x => x.replace('12 snorkeling equipment', '12 snorkeling sets').replace('2 kayak', '2 kayaks')) : COMMON,
+      key,
+      cover: `media/cover/${key}.webp`,
       images,
+      cabins: (inc.find(x => /bedroom/i.test(x)) || '').replace(/ bedrooms?/i, ''),
+      baths: (inc.find(x => /bathroom/i.test(x)) || '').replace(/ bathrooms?/i, ''),
       tier: ft >= 90 ? 'super' : ft >= 50 ? 'luxury' : 'day',
     });
   }
