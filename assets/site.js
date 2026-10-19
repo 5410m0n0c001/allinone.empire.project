@@ -218,12 +218,12 @@
   $$('[data-carousel]').forEach(function (C) {
     var track = $('.carousel__track', C), coins = $$('.coin', C);
     var shape = function () {
-      var r = track.getBoundingClientRect(), mid = r.left + r.width / 2;
+      // posicion de layout (offsetLeft), no getBoundingClientRect: el rect ya viene rotado y realimentaba el giro
+      var mid = track.scrollLeft + track.clientWidth / 2;
       coins.forEach(function (c) {
-        if (c.hidden) return;
-        var b = c.getBoundingClientRect(), d = (b.left + b.width / 2 - mid) / b.width;
-        if (reduce) return;
-        var a = clamp(d, -3, 3);
+        if (c.hidden || reduce) return;
+        var d = (c.offsetLeft + c.offsetWidth / 2 - mid) / c.offsetWidth;
+        var a = clamp(d, -2, 2);
         c.style.transform = 'rotateY(' + (-a * 34).toFixed(2) + 'deg) translateZ(' + (-Math.abs(a) * 110).toFixed(1) + 'px) scale(' + (1 - Math.min(Math.abs(a), 2) * 0.06).toFixed(3) + ')';
         c.style.opacity = (1 - Math.min(Math.abs(a), 3) * 0.16).toFixed(3);
       });
@@ -231,7 +231,7 @@
     track.addEventListener('scroll', function () { requestAnimationFrame(shape); }, { passive: true });
     addEventListener('resize', shape);
     shape();
-    var step = function (dir) { track.scrollBy({ left: dir * (coins[0].offsetWidth), behavior: reduce ? 'auto' : 'smooth' }); };
+    var step = function (dir) { var w = (coins.find(function (c) { return !c.hidden; }) || coins[0]).offsetWidth; track.scrollBy({ left: dir * w, behavior: reduce ? 'auto' : 'smooth' }); };
     $$('[data-step]', C).forEach(function (b) { b.addEventListener('click', function () { step(+b.getAttribute('data-step')); }); });
     $$('.chip', C).forEach(function (ch) {
       ch.addEventListener('click', function () {

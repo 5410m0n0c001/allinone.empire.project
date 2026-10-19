@@ -201,7 +201,7 @@ a { color: inherit; }
 .head .dock { --dock: clamp(3.2rem, 5vw, 4.4rem); }
 .carousel { position: relative; margin-top: var(--sc-7); }
 .carousel__track {
-  display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+  position: relative; display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
   padding: var(--sc-6) calc(50vw - min(62vw, 22rem) / 2); perspective: 1400px;
 }
 .carousel__track::-webkit-scrollbar { display: none; }
