@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏝️ All In One Empire - Dashboard Ejecutivo 2025</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.svg">
+
+    <!-- Meta Tags para Redes Sociales -->
+    <meta property="og:title" content="All In One Empire - Dashboard Ejecutivo 2025">
+    <meta property="og:description" content="Ecosistema Premium de Servicios en Los Cabos, México. Aplicación completa de la metodología de emprendimiento.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://allin1cabo.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="All In One Empire - Dashboard Ejecutivo 2025">
+    <meta name="twitter:description" content="Ecosistema Premium de Servicios en Los Cabos, México">
+    <meta name="twitter:image" content="logo.png">
+
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Dashboard ejecutivo del ecosistema All In One Empire en Los Cabos. 15 unidades de negocio premium aplicando metodología completa de emprendimiento.">
+    <meta name="keywords" content="Los Cabos, turismo premium, emprendimiento, ecosistema empresarial, servicios náuticos, propiedades luxury">
+    <meta name="author" content="All In One Empire">
+
+    <link rel="stylesheet" href="dashboard-vanilla.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Ejecutivo -->
+        <header class="header-section">
+            <div class="header-content">
+                <div class="header-brand">
+                    <div class="logo-container">
+                        <img src="logo.png" alt="All In One Empire Logo" class="brand-logo">
+                    </div>
+                    <div class="brand-text">
+                        <h1 class="main-title">All In One Empire</h1>
+                        <p class="main-subtitle">Ecosistema Premium Los Cabos - Dashboard Ejecutivo 2025</p>
+                    </div>
+                </div>
+
+                <!-- KPIs Principales -->
+                <div class="kpi-grid">
+                    <div class="kpi-card" data-tooltip="Porcentaje de habitaciones ocupadas vs disponibles en Los Cabos">
+                        <div class="kpi-label">Ocupación Hotelera</div>
+                        <div class="kpi-value" id="ocupacion-value">79%</div>
+                    </div>
+                    <div class="kpi-card" data-tooltip="Average Daily Rate: Tarifa promedio por noche de hotel en USD">
+                        <div class="kpi-label">ADR</div>
+                        <div class="kpi-value" id="adr-value">$498</div>
+                    </div>
+                    <div class="kpi-card" data-tooltip="Revenue Per Available Room: Ingreso por habitación disponible">
+                        <div class="kpi-label">RevPAR</div>
+                        <div class="kpi-value" id="revpar-value">$418</div>
+                    </div>
+                    <div class="kpi-card" data-tooltip="Porcentaje de turistas extranjeros (principalmente USA)">
+                        <div class="kpi-label">Turismo Int.</div>
+                        <div class="kpi-value" id="turismo-int-value">85.6%</div>
+                    </div>
+                    <div class="kpi-card" data-tooltip="606,000 pasajeros de cruceros en 2025">
+                        <div class="kpi-label">Cruceros</div>
+                        <div class="kpi-value" id="cruceros-value">606K</div>
+                    </div>
+                    <div class="kpi-card" data-tooltip="40,000 embarcaciones registradas +30 pies">
+                        <div class="kpi-label">Embarcaciones</div>
+                        <div class="kpi-value" id="embarcaciones-value">40K</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contexto del Mercado -->
+        <section class="market-context">
+            <div class="section-header">
+                <h2 class="section-title">📊 Contexto del Mercado Los Cabos 2025</h2>
+                <button class="toggle-btn" onclick="toggleSection('market')">Ver Detalles</button>
+            </div>
+
+            <div class="market-grid">
+                <div class="market-column">
+                    <h3 class="column-title">🏨 Infraestructura Hotelera</h3>
+                    <ul class="data-list">
+                        <li><strong>85+ grupos hoteleros</strong> operando</li>
+                        <li><strong>19,500 habitaciones</strong> disponibles</li>
+                        <li><strong>3,000 cuartos luxury</strong> (~250 por resort)</li>
+                        <li>Ocupación récord: <strong>84% en marzo</strong></li>
+                    </ul>
+                </div>
+                <div class="market-column">
+                    <h3 class="column-title">👥 Perfil del Turista</h3>
+                    <ul class="data-list">
+                        <li><strong>42% turistas repetitivos</strong></li>
+                        <li>Gasto luxury: <strong>$2,400 USD/noche</strong></li>
+                        <li><strong>USA principal origen</strong> (80-85%)</li>
+                        <li>California: <strong>40%</strong> de turistas USA</li>
+                        <li>Turismo nacional: hasta <strong>40% en verano</strong></li>
+                    </ul>
+                </div>
+                <div class="market-column">
+                    <h3 class="column-title">⚓ Infraestructura Náutica</h3>
+                    <ul class="data-list">
+                        <li><strong>380 muelles</strong> en Marina CSL</li>
+                        <li><strong>40K+ embarcaciones</strong> registradas (+30 pies)</li>
+                        <li><strong>32 yates/mes</strong> promedio arribos</li>
+                        <li><strong>161 cruceros</strong> en 2025 (+36%)</li>
+                        <li>Centro náutico clave del <strong>Pacífico mexicano</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="market-details" class="section-details" style="display: none;">
+                <div class="details-grid">
+                    <div class="details-column">
+                        <h4 class="details-title">📈 Crecimiento Turístico</h4>
+                        <ul class="data-list">
+                            <li>• Recuperación sostenida: +2.1% visitantes vs 2024</li>
+                            <li>• Turismo internacional predominante (80-85%)</li>
+                            <li>• Mercado USA: California representa 40% del turismo americano</li>
+                            <li>• Turismo nacional repunta en verano hasta 40%</li>
+                        </ul>
+                    </div>
+                    <div class="details-column">
+                        <h4 class="details-title">💰 Impacto Económico</h4>
+                        <ul class="data-list">
+                            <li>• Impacto cruceros: >$54 millones USD en 2025</li>
+                            <li>• Gasto promedio luxury: >$2,400 USD por noche</li>
+                            <li>• 4.5M pasajeros anuales en BCS (54% extranjeros)</li>
+                            <li>• 97+ socios hoteleros registrados</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sources">
+                    <strong>Fuentes:</strong> FITURCA, Observatorio Turístico Los Cabos, DataTur/SECTUR, Asociación de Hoteles BCS, API Cabo San Lucas
+                </div>
+            </div>
+        </section>
+
+        <!-- Unidades de Negocio -->
+        <section class="business-units">
+            <h2 class="section-title">📊 15 Unidades de Negocio + Plataforma Central</h2>
+            <div class="featured-banner">
+                ⭐ DESTACADO: Allin1 Marine & Auto Workshop - Concepto revolucionario dual
+            </div>
+
+            <div class="units-grid" id="units-grid">
+                <!-- Las unidades se cargarán dinámicamente con JavaScript -->
+            </div>
+
+            <button class="view-all-btn" onclick="showAllUnits()">📈 Ver Todas las Unidades (Vista General)</button>
+        </section>
+
+        <!-- Vista Detallada de Unidad -->
+        <section class="unit-detail" id="unit-detail" style="display: none;">
+            <div class="detail-header">
+                <div class="detail-title-section">
+                    <div class="detail-icon" id="detail-icon"></div>
+                    <div class="detail-info">
+                        <h2 class="detail-title" id="detail-title-text"></h2>
+                        <div class="detail-badges">
+                            <span class="status-badge" id="detail-status"></span>
+                            <span class="revenue-badge" id="detail-revenue"></span>
+                            <span class="growth-badge" id="detail-growth"></span>
+                        </div>
+                        <div class="detail-location" id="detail-location"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kpi-detail-grid" id="kpi-detail-grid">
+                <!-- Los KPIs se cargarán dinámicamente -->
+            </div>
+
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion('justificacion')">
+                        <span class="accordion-icon">📈</span>
+                        <span>Justificación Metodológica</span>
+                        <span class="accordion-arrow" id="justificacion-arrow">▶</span>
+                    </button>
+                    <div class="accordion-content" id="justificacion-content">
+                        <p id="justificacion-text"></p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion('segmento')">
+                        <span class="accordion-icon">👥</span>
+                        <span>Segmento Clientes</span>
+                        <span class="accordion-arrow" id="segmento-arrow">▶</span>
+                    </button>
+                    <div class="accordion-content" id="segmento-content">
+                        <p id="segmento-text"></p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion('fuentes')">
+                        <span class="accordion-icon">💰</span>
+                        <span>Fuentes Ingreso</span>
+                        <span class="accordion-arrow" id="fuentes-arrow">▶</span>
+                    </button>
+                    <div class="accordion-content" id="fuentes-content">
+                        <p id="fuentes-text"></p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion('propuesta')">
+                        <span class="accordion-icon">🎯</span>
+                        <span>Propuesta Valor</span>
+                        <span class="accordion-arrow" id="propuesta-arrow">▶</span>
+                    </button>
+                    <div class="accordion-content" id="propuesta-content">
+                        <p id="propuesta-text"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer con Logo -->
+        <footer class="dashboard-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="All In One Empire" class="footer-logo-img">
+                    <div class="footer-text">
+                        <h3>All In One Empire</h3>
+                        <p>Ecosistema Premium Los Cabos - 2025</p>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p><strong>Metodología:</strong> De la idea al plan de negocios</p>
+                    <p><strong>Tecnología:</strong> HTML5, CSS3, JavaScript Vanilla</p>
+                    <p><strong>Enfoque:</strong> Aplicación rigurosa de principios emprendedores</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Metodología del Curso -->
+        <section class="methodology">
+            <div class="section-header">
+                <h2 class="section-title">📚 Metodología: De la idea al plan de negocios</h2>
+                <button class="toggle-btn" onclick="toggleSection('metodologia')">Ver Detalles</button>
+            </div>
+
+            <div class="methodology-grid">
+                <div class="methodology-column">
+                    <h3 class="methodology-title">✅ 3 Fuerzas del Negocio</h3>
+                    <ul class="methodology-list">
+                        <li>• Emprendedor: Equipo con experiencia validada</li>
+                        <li>• Oportunidad: Mercado 79% ocupación, 605K cruceros</li>
+                        <li>• Recursos: Tecnología, flota, alianzas, capital</li>
+                    </ul>
+                </div>
+                <div class="methodology-column">
+                    <h3 class="methodology-title">✅ Validación Oportunidades</h3>
+                    <ul class="methodology-list">
+                        <li>• Problema: Fragmentación servicios premium</li>
+                        <li>• Solución 3x mejor: Ecosistema integrado digital</li>
+                        <li>• Mercado: $54M+ impacto económico anual</li>
+                    </ul>
+                </div>
+                <div class="methodology-column">
+                    <h3 class="methodology-title">✅ Modelo Negocio</h3>
+                    <ul class="methodology-list">
+                        <li>• CLV optimizado por recurrencia (42% repetitivos)</li>
+                        <li>• CAC bajo via marketing digital</li>
+                        <li>• Escalabilidad: app centraliza ecosistema</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="metodologia-details" class="section-details" style="display: none;">
+                <div class="details-grid">
+                    <div class="details-column">
+                        <h4 class="details-title">🎯 Aplicación Específica al Proyecto</h4>
+                        <ul class="methodology-list">
+                            <li><strong>Mapa de Valor:</strong> Aliviadores de frustraciones (burocracia en renta de embarcaciones → app con reservas 100% digitales)</li>
+                            <li><strong>Creadores de Alegrías:</strong> Experiencias personalizadas (servicio de concierge 24/7)</li>
+                            <li><strong>Business Model Canvas:</strong> Diversificación ingresos (comisiones 30%, renta propiedades 40%)</li>
+                        </ul>
+                    </div>
+                    <div class="details-column">
+                        <h4 class="details-title">💡 Justificaciones Pedagógicas</h4>
+                        <ul class="methodology-list">
+                            <li><strong>Programa de lealtad:</strong> "El curso enfatiza que la recurrencia incrementa el CLV"</li>
+                            <li><strong>Alianzas financieras:</strong> "Priorizamos alianzas con Visa/MasterCard para reducir riesgos regulatorios"</li>
+                            <li><strong>Punto de equilibrio:</strong> "Calculamos el breakeven en 18 meses considerando costos fijos y margen de contribución"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip" style="display: none;"></div>
+
+    <script src="dashboard-vanilla.js"></script>
+</body>
+</html>
