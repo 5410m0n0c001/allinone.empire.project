@@ -35,10 +35,18 @@ La mayoría son **fichas individuales de yates** (~50 barcos, cada uno su págin
 - [x] **EN VIVO: https://5410m0n0c001.github.io/allinone.empire.project/** (repo `5410m0n0c001/allinone.empire.project`).
   - Rama `main` = solo el sitio generado (lo que sirve Pages). Rama `source` = este repo (generador, scraper, contexto).
   - El repo antes tenía el "All In One Empire – Dashboard Ejecutivo" en la raíz; por decisión de Salo se eliminó (recuperable en commit `6fa190d`).
-  - Re-publicar: `npm run build` → copiar `site/.` a la raíz de un worktree de `origin/main` (ej. `D:\allin1cabo_deploy`, rama `deploy`) → commit → `git push origin deploy:main`. Y `git push origin main:source` para el código.
+  - Re-publicar: `npm run build` → copiar `site/.` (SIN `media/img`, ya no se usa) a la raíz de un worktree de `origin/main` (ej. `D:\allin1cabo_deploy`, rama `deploy`) → commit → `git push origin deploy:main`. Y `git push origin main:source` para el código.
+
+## Rediseño 3D (18-oct-2026, en vivo)
+Salo dijo que la 1a versión era peor que el Wix (perdió los videos a pantalla completa). Rehecho con el skill **scroll-craft** (brief y score en `scrollcraft/builds/allin1cabo/BRIEF.md`):
+- **Flota sobre el mar** (idea de Salo): video del Arco de fondo; cada yate entra pequeño y acostado en el horizonte, navega hacia ti y se detiene con su ficha (hechos) del otro lado. Home = 7 destacados; `fleet.html` = los 48.
+- **Emblema 3D viajero** (idea de Salo): el logo extruido vuela y se acopla en cada sección.
+- Carrusel 3D de los 48, 6 salas de video a pantalla completa (Sea, Land, Sky, Night, Celebrate, Stay & move), crew de video, formulario → WhatsApp que lleva el yate elegido.
+- Portadas: recorte limpio de la tarjeta del dueño (`media/cover/<pagina>.webp`). Descubierto: Wix copiaba páginas y dejaba fotos de otro barco → cada foto se asigna a la 1a ficha donde aparece (Blue Moon, Love Shak, Lagoon, Egoista, Olivia Grace y Morrita solo tienen su portada).
+- Motor `site/assets/scrollcraft.*` (no editar) + `site.css`/`site.js` propios. Ya no se usa Tailwind.
 
 ## Cómo se construye
-- `npm run scrape` → `_captura/catalogo_site.json` · `npm run media` → descarga/comprime medios + `_captura/media_map.json` · `npm run build` → genera HTML + Tailwind compilado (`site/assets/styles.css`).
+- `npm run scrape` → `_captura/catalogo_site.json` · `npm run media` → descarga/comprime medios + `_captura/media_map.json` · `npm run build` → genera el HTML (`node build.js`). `node src/pick-sea.js` = elección automática de foto con agua (referencia).
 - Textos de servicios: `src/content.js` (del sitio original, corregidos/traducidos al inglés, sin inventar precios). Flota: `src/yachts.js` (parsea fichas).
 - Paleta: ink #0a1824 · sea #0f5c6e · sand #efe6d8 · gold #d4a95a. Fuentes: Fraunces (display) + Manrope.
 
