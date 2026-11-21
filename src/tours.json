@@ -1,0 +1,641 @@
+{
+ "updated": "2026-11-21",
+ "groups": [
+  {
+   "key": "ranch",
+   "title": "Desert ranch on the Pacific",
+   "intro": "Ranch entrance, round-trip hotel transportation, bilingual guide, helmets and cold water included. Two quesadillas and fresh water at the end of the tour.",
+   "notes": "Drivers 18+ with a valid license. UTV passengers 6+ or 1.20 m tall. Camels: minimum height 1 m, maximum 130 kg. Optional vehicle insurance and photos are not included. Closed shoes, comfortable clothes and sunscreen. Free cancellation up to 24 h before.",
+   "items": [
+    {
+     "id": "RSC-01",
+     "name": "Combo: 2 activities",
+     "unit": "per person",
+     "detail": "",
+     "price": 155
+    },
+    {
+     "id": "RSC-02",
+     "name": "UTV Can-Am · 1 seat",
+     "unit": "per vehicle",
+     "detail": "Driver needs a valid license",
+     "price": 230
+    },
+    {
+     "id": "RSC-03",
+     "name": "UTV Can-Am · 2 seats",
+     "unit": "per vehicle",
+     "detail": "Driver needs a valid license",
+     "price": 290
+    },
+    {
+     "id": "RSC-04",
+     "name": "UTV Can-Am · 3 seats",
+     "unit": "per vehicle",
+     "detail": "Driver needs a valid license",
+     "price": 350
+    },
+    {
+     "id": "RSC-05",
+     "name": "UTV Can-Am · 4 seats",
+     "unit": "per vehicle",
+     "detail": "Driver needs a valid license",
+     "price": 390
+    },
+    {
+     "id": "RSC-06",
+     "name": "ATV 250 · single",
+     "unit": "per vehicle",
+     "detail": "",
+     "price": 140
+    },
+    {
+     "id": "RSC-07",
+     "name": "Spider motorbike · single",
+     "unit": "per vehicle",
+     "detail": "",
+     "price": 140
+    },
+    {
+     "id": "RSC-08",
+     "name": "Spider motorbike · double",
+     "unit": "per vehicle",
+     "detail": "",
+     "price": 220
+    },
+    {
+     "id": "RSC-09",
+     "name": "Morning hike",
+     "unit": "per person",
+     "detail": "Minimum 2 people",
+     "price": 64
+    },
+    {
+     "id": "RSC-10",
+     "name": "Camel ride · adult",
+     "unit": "per person",
+     "detail": "Max 130 kg",
+     "price": 110
+    },
+    {
+     "id": "RSC-11",
+     "name": "Camel ride · child",
+     "unit": "per person",
+     "detail": "Min height 1 m",
+     "price": 75
+    },
+    {
+     "id": "RSC-12",
+     "name": "Beach fishing · adult",
+     "unit": "per person",
+     "detail": "Minimum 2 people",
+     "price": 249
+    },
+    {
+     "id": "RSC-13",
+     "name": "Beach fishing · child",
+     "unit": "per person",
+     "detail": "",
+     "price": 195
+    }
+   ]
+  },
+  {
+   "key": "canyon",
+   "title": "Canyon adventure park",
+   "intro": "Prices shown include park entrance, transportation from the hotel zone and the mandatory vehicle insurance. Every pass also includes unlimited Wagoona, animal sanctuary, hanging bridges, bikes, climbing wall, One Wheel and tequila tasting.",
+   "notes": "Pickup from Zona Diamante or Puerto Los Cabos: +$10 adult, +$5 child. Non-participating companion: $55. Private tours available on request.",
+   "items": [
+    {
+     "id": "WC-01",
+     "name": "Ultimate Pass · adult",
+     "unit": "per person",
+     "detail": "Everything unlimited: ATV, UTV, camels, ziplines, bungee or swing, horses, Wagoona, animal sanctuary, bridges, bikes, climbing wall, One Wheel. Meal, photo package and tequila tasting. Daily 9:00 or 10:45 · 6 h",
+     "price": 379
+    },
+    {
+     "id": "WC-02",
+     "name": "Ultimate Pass · child 4–12",
+     "unit": "per person",
+     "detail": "Same as adult",
+     "price": 205
+    },
+    {
+     "id": "WC-03",
+     "name": "Park Pass · adult",
+     "unit": "per person",
+     "detail": "ATV, UTV, camels, ziplines, horses, bungee or swing. Daily 9:00 or 10:45 · 6 h",
+     "price": 298
+    },
+    {
+     "id": "WC-04",
+     "name": "Park Pass · child 4–12",
+     "unit": "per person",
+     "detail": "Same as adult",
+     "price": 169
+    },
+    {
+     "id": "WC-05",
+     "name": "Triple Thrill: 3 activities",
+     "unit": "per person",
+     "detail": "Pick 3: ATV, UTV, camels, ziplines, horses, bungee, swing. Daily 9:00 or 12:00 · 3 h",
+     "price": 244
+    },
+    {
+     "id": "WC-06",
+     "name": "Dual Experience: 2 activities",
+     "unit": "per person",
+     "detail": "Pick 2: ATV, UTV, camels, ziplines, horses. Daily 9:00 or 12:00 · 3 h",
+     "price": 209
+    },
+    {
+     "id": "WC-07",
+     "name": "1 activity · adult",
+     "unit": "per person",
+     "detail": "Pick 1: Monster ziplines, bungee, swing, camel quest, horseback, animal kingdom",
+     "price": 150
+    },
+    {
+     "id": "WC-08",
+     "name": "1 activity · child 4–12",
+     "unit": "per person",
+     "detail": "",
+     "price": 125
+    },
+    {
+     "id": "WC-09",
+     "name": "Off-road ATV · single",
+     "unit": "per vehicle",
+     "detail": "Daily 9:00, 12:00 or 15:00 · 3 h",
+     "price": 185
+    },
+    {
+     "id": "WC-10",
+     "name": "Off-road ATV · double",
+     "unit": "per vehicle",
+     "detail": "Daily 9:00, 12:00 or 15:00 · 3 h",
+     "price": 265
+    },
+    {
+     "id": "WC-11",
+     "name": "Off-road UTV · 1 seat",
+     "unit": "per vehicle",
+     "detail": "Daily 9:00, 12:00 or 15:00 · 3 h",
+     "price": 283
+    },
+    {
+     "id": "WC-12",
+     "name": "Off-road UTV · 2 seats",
+     "unit": "per vehicle",
+     "detail": "Daily 9:00, 12:00 or 15:00 · 3 h",
+     "price": 397
+    },
+    {
+     "id": "WC-13",
+     "name": "Off-road UTV · 3 seats",
+     "unit": "per vehicle",
+     "detail": "Daily 9:00, 12:00 or 15:00 · 3 h",
+     "price": 480
+    },
+    {
+     "id": "WC-14",
+     "name": "Off-road UTV · 4 seats",
+     "unit": "per vehicle",
+     "detail": "Daily 9:00, 12:00 or 15:00 · 3 h",
+     "price": 540
+    },
+    {
+     "id": "WC-15",
+     "name": "Signature East Cape",
+     "unit": "per vehicle",
+     "detail": "Snacks, bandanas, beach umbrellas and chairs. Daily 9:30 · 3 h",
+     "price": 1000
+    },
+    {
+     "id": "WC-16",
+     "name": "Moon Zipping · adult",
+     "unit": "per person",
+     "detail": "Night UTV ride, night ziplines and bridges, 5 drinks, taco bar dinner, s'mores, tequila tasting. High season 17:00 · 4 h",
+     "price": 253
+    },
+    {
+     "id": "WC-17",
+     "name": "Moon Zipping · child 8–12",
+     "unit": "per person",
+     "detail": "",
+     "price": 179
+    }
+   ]
+  },
+  {
+   "key": "dunes",
+   "title": "Beach, dunes & desert park",
+   "intro": "Prices shown include the park entrance.",
+   "notes": "Vehicle insurance is not included. Ask us about seasonal promotions.",
+   "items": [
+    {
+     "id": "PP-01",
+     "name": "Full Park Pass · full day",
+     "unit": "per person",
+     "detail": "",
+     "price": 324
+    },
+    {
+     "id": "PP-02",
+     "name": "Full Park Pass · extended half day",
+     "unit": "per person",
+     "detail": "",
+     "price": 274
+    },
+    {
+     "id": "PP-03",
+     "name": "Full Park Pass · half day",
+     "unit": "per person",
+     "detail": "",
+     "price": 224
+    },
+    {
+     "id": "PP-04",
+     "name": "Combo: 2 activities",
+     "unit": "per person",
+     "detail": "",
+     "price": 150
+    },
+    {
+     "id": "PP-05",
+     "name": "Combo: 3 activities",
+     "unit": "per person",
+     "detail": "",
+     "price": 200
+    },
+    {
+     "id": "PP-06",
+     "name": "Premium combo: 2 activities",
+     "unit": "per person",
+     "detail": "",
+     "price": 200
+    },
+    {
+     "id": "PP-07",
+     "name": "Balandra Beach",
+     "unit": "per person",
+     "detail": "",
+     "price": 175
+    },
+    {
+     "id": "PP-08",
+     "name": "Camel ride & encounter · adult",
+     "unit": "per person",
+     "detail": "",
+     "price": 150
+    },
+    {
+     "id": "PP-09",
+     "name": "Camel ride & encounter · child",
+     "unit": "per person",
+     "detail": "",
+     "price": 85
+    },
+    {
+     "id": "PP-10",
+     "name": "Side by side RZR · 1 person",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $45 not included",
+     "price": 230
+    },
+    {
+     "id": "PP-11",
+     "name": "Side by side RZR · 2 people",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $45 not included",
+     "price": 340
+    },
+    {
+     "id": "PP-12",
+     "name": "Side by side RZR · 3 people",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $45 not included",
+     "price": 425
+    },
+    {
+     "id": "PP-13",
+     "name": "Side by side RZR · 4 people",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $45 not included",
+     "price": 505
+    },
+    {
+     "id": "PP-14",
+     "name": "Kids mini RZR 170 · 1 child",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $25 not included",
+     "price": 165
+    },
+    {
+     "id": "PP-15",
+     "name": "Kids mini RZR 170 · 2 children",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $25 not included",
+     "price": 225
+    },
+    {
+     "id": "PP-16",
+     "name": "Migriño ATV tour · single",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $25 not included",
+     "price": 150
+    },
+    {
+     "id": "PP-17",
+     "name": "Migriño ATV tour · double",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $35 not included",
+     "price": 250
+    },
+    {
+     "id": "PP-18",
+     "name": "Sky Bikes (Guinness record) · adult",
+     "unit": "per person",
+     "detail": "",
+     "price": 150
+    },
+    {
+     "id": "PP-19",
+     "name": "Sky Bikes (Guinness record) · child",
+     "unit": "per person",
+     "detail": "",
+     "price": 85
+    },
+    {
+     "id": "PP-20",
+     "name": "Horseback riding · adult",
+     "unit": "per person",
+     "detail": "",
+     "price": 150
+    },
+    {
+     "id": "PP-21",
+     "name": "Horseback riding · child",
+     "unit": "per person",
+     "detail": "",
+     "price": 85
+    },
+    {
+     "id": "PP-22",
+     "name": "Beach & dunes ATV premium · single",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $35 not included",
+     "price": 195
+    },
+    {
+     "id": "PP-23",
+     "name": "Beach & dunes ATV premium · double",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $35 not included",
+     "price": 300
+    },
+    {
+     "id": "PP-24",
+     "name": "Can-Am X3 Turbo · 1 person",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $60 not included",
+     "price": 325
+    },
+    {
+     "id": "PP-25",
+     "name": "Can-Am X3 Turbo · 2 people",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $60 not included",
+     "price": 450
+    },
+    {
+     "id": "PP-26",
+     "name": "Can-Am X3 Turbo · 3 people",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $60 not included",
+     "price": 525
+    },
+    {
+     "id": "PP-27",
+     "name": "Can-Am X3 Turbo · 4 people",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $60 not included",
+     "price": 600
+    },
+    {
+     "id": "PP-28",
+     "name": "Maverick RC Turbo · 1–2 people",
+     "unit": "per vehicle",
+     "detail": "Vehicle insurance $75 not included",
+     "price": 625
+    }
+   ]
+  },
+  {
+   "key": "beach",
+   "title": "Beach club & water sports",
+   "intro": "Prices shown include transportation from the hotel zone and the mandatory jet ski insurance.",
+   "notes": "Lunch at the beach club is mandatory and paid on site: $60 adult, $40 child. Everyone must bring an ID.",
+   "items": [
+    {
+     "id": "WB-01",
+     "name": "Beach Pass · adult",
+     "unit": "per person",
+     "detail": "Lockers, showers, loungers, snorkel, boogie, paddle, surf, kayak, Hobie Cat + 30 min jet ski. Daily 10:45–16:45. Lunch $60 paid on site",
+     "price": 234
+    },
+    {
+     "id": "WB-02",
+     "name": "Beach Pass · child 6–12",
+     "unit": "per person",
+     "detail": "Lunch $40 paid on site",
+     "price": 119
+    },
+    {
+     "id": "WB-03",
+     "name": "Fun Day · adult",
+     "unit": "per person",
+     "detail": "Same as Beach Pass, without jet ski. Lunch $60 paid on site",
+     "price": 100
+    },
+    {
+     "id": "WB-04",
+     "name": "Fun Day · child 6–12",
+     "unit": "per person",
+     "detail": "Lunch $40 paid on site",
+     "price": 60
+    },
+    {
+     "id": "WB-05",
+     "name": "Aqua Adventure · adult",
+     "unit": "per person",
+     "detail": "Pick 1: snorkel, boogie, paddle, surf, kayak, Hobie Cat. 9:00, 10:45 or 13:00 · 2 h",
+     "price": 80
+    },
+    {
+     "id": "WB-06",
+     "name": "Aqua Adventure · child 6–12",
+     "unit": "per person",
+     "detail": "",
+     "price": 45
+    },
+    {
+     "id": "WB-07",
+     "name": "Jet ski rental · 1 hour",
+     "unit": "per jet ski (1–2)",
+     "detail": "9:00–15:00",
+     "price": 235
+    },
+    {
+     "id": "WB-08",
+     "name": "Jet ski rental · 30 min",
+     "unit": "per jet ski (1–2)",
+     "detail": "9:00–15:00",
+     "price": 175
+    },
+    {
+     "id": "WB-09",
+     "name": "Jet ski + snorkel at Chileno",
+     "unit": "per jet ski (1–2)",
+     "detail": "",
+     "price": 435
+    },
+    {
+     "id": "WB-10",
+     "name": "eFoil class · 30 min",
+     "unit": "per person",
+     "detail": "",
+     "price": 150
+    },
+    {
+     "id": "WB-11",
+     "name": "eFoil class · 1 hour",
+     "unit": "per person",
+     "detail": "",
+     "price": 200
+    },
+    {
+     "id": "WB-12",
+     "name": "eFoil class · 2 hours",
+     "unit": "per person",
+     "detail": "",
+     "price": 300
+    },
+    {
+     "id": "WB-13",
+     "name": "Guided Hobie Cat · 1 hour",
+     "unit": "up to 3 people",
+     "detail": "",
+     "price": 200
+    },
+    {
+     "id": "WB-14",
+     "name": "Guided surf at Acapulquito · 1 hour",
+     "unit": "per person",
+     "detail": "",
+     "price": 165
+    }
+   ]
+  },
+  {
+   "key": "premium",
+   "title": "Signature off-road tours",
+   "intro": "Transportation, insurance, entrance and bottled water included.",
+   "notes": "Everyone must bring an ID.",
+   "items": [
+    {
+     "id": "WB-15",
+     "name": "Signature UTV · 3 hours",
+     "unit": "per vehicle",
+     "detail": "",
+     "price": 850
+    },
+    {
+     "id": "WB-16",
+     "name": "Signature UTV · 1 hour",
+     "unit": "per vehicle",
+     "detail": "",
+     "price": 450
+    },
+    {
+     "id": "WB-17",
+     "name": "Signature ATV single · 3 hours",
+     "unit": "per vehicle",
+     "detail": "",
+     "price": 350
+    },
+    {
+     "id": "WB-18",
+     "name": "Signature ATV double · 3 hours",
+     "unit": "per vehicle",
+     "detail": "",
+     "price": 475
+    },
+    {
+     "id": "WB-19",
+     "name": "Express ATV single · 1 hour",
+     "unit": "per vehicle",
+     "detail": "",
+     "price": 180
+    },
+    {
+     "id": "WB-20",
+     "name": "Express ATV double · 1 hour",
+     "unit": "per vehicle",
+     "detail": "",
+     "price": 275
+    },
+    {
+     "id": "WB-21",
+     "name": "Guided electric bike · 2 hours",
+     "unit": "per person",
+     "detail": "",
+     "price": 150
+    }
+   ]
+  },
+  {
+   "key": "sail",
+   "title": "Private sailing & whale watching",
+   "intro": "Private charters include private transportation, dock fee, national open bar, food and snacks, paddle boards, snorkel gear, towels and fishing gear.",
+   "notes": "Whale season runs December to April.",
+   "items": [
+    {
+     "id": "SA-01",
+     "name": "Private sailboat · up to 10 guests",
+     "unit": "per boat",
+     "detail": "Snorkel 11:00–15:00 or sunset 16:00–19:00, or whale watching",
+     "price": 2300
+    },
+    {
+     "id": "SA-02",
+     "name": "Extra guest on private sailboat",
+     "unit": "per person",
+     "detail": "",
+     "price": 160
+    },
+    {
+     "id": "SA-03",
+     "name": "Private sailboat · up to 8 guests",
+     "unit": "per boat",
+     "detail": "Snorkel 11:00–15:00 or sunset 16:00–19:00, or whale watching",
+     "price": 1600
+    },
+    {
+     "id": "SA-04",
+     "name": "Shared whale watching · adult",
+     "unit": "per person",
+     "detail": "2.5 h, open bar and snacks. Daily 8:00–10:30, December–April",
+     "price": 159
+    },
+    {
+     "id": "SA-05",
+     "name": "Shared whale watching · child 4–12",
+     "unit": "per person",
+     "detail": "",
+     "price": 134
+    }
+   ]
+  }
+ ]
+}

@@ -310,6 +310,19 @@ a { color: inherit; }
 .price { font: 600 var(--sc-t-2xl)/1 var(--sc-font-display); font-stretch: 100%; color: var(--sc-accent); }
 .ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.45rem; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); }
 .ticks li::before { content: ""; display: inline-block; width: 0.45rem; height: 0.45rem; margin-right: 0.6rem; border-radius: 50%; background: var(--sc-accent); vertical-align: 0.1em; }
+.tours { list-style: none; padding: 0; margin: var(--sc-6) 0 0; border-top: 1px solid var(--sc-hairline); }
+.tour { display: grid; grid-template-columns: 1fr auto auto; gap: var(--sc-3) var(--sc-5); align-items: center; padding: var(--sc-4) 0; border-bottom: 1px solid var(--sc-hairline); }
+.tour h3 { font: 600 var(--sc-t-base)/1.25 var(--sc-font-text); margin: 0; }
+.tour__info p { margin: 0.3rem 0 0; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); }
+.tour__price { margin: 0; text-align: right; display: grid; }
+.tour__price b { font: 600 var(--sc-t-xl)/1 var(--sc-font-display); color: var(--sc-accent); }
+.tour__price span { font: 500 var(--sc-t-xs)/1.4 var(--sc-font-mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--sc-ink-soft); }
+.tours__notes { margin-top: var(--sc-4); line-height: 1.6; text-transform: none; letter-spacing: 0; }
+@media (max-width: 560px) {
+  .tour { grid-template-columns: 1fr auto; }
+  .tour__info { grid-column: 1 / -1; }
+  .tour__price { text-align: left; }
+}
 .mosaic { columns: 3 18rem; column-gap: var(--sc-4); }
 .mosaic button { display: block; width: 100%; margin: 0 0 var(--sc-4); padding: 0; border: 0; border-radius: var(--sc-r-md); overflow: hidden; background: var(--sc-surface); cursor: zoom-in; break-inside: avoid; }
 .mosaic img { display: block; width: 100%; height: auto; transition: transform var(--sc-d-slow) var(--sc-ease-out); }

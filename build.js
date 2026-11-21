@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { CONTACT, VIDEO_PERKS, SERVICES } = require('./src/content');
 const { parseYachts } = require('./src/yachts');
+const TOURS = require('./src/tours.json'); // solo precio publico; balances viven en D:\allin1cabo_privado (Excel)
 
 const OUT = 'site';
 const pages = require('./_captura/catalogo_site.json');
@@ -54,7 +55,7 @@ const dock = (extra = '') => `<span class="dock dock--static${extra}" aria-hidde
 function layout({ title, desc, depth = 0, body, ogImage, home = false }) {
   const r = '../'.repeat(depth);
   const h = home ? '' : `${r}index.html`;
-  const nav = [['Yachts', `${h}#fleet`, 'fleet'], ['Experiences', `${h}#experiences`, 'experiences'], ['Real Estate', `${r}services/real-estate.html`, 'real-estate'], ['Film', `${h}#film`, 'film'], ['Contact', home ? '#inquire' : `${r}contact.html`, 'inquire']];
+  const nav = [['Yachts', `${h}#fleet`, 'fleet'], ['Experiences', `${h}#experiences`, 'experiences'], ['Tours', `${r}tours.html`, 'tours'], ['Real Estate', `${r}services/real-estate.html`, 'real-estate'], ['Film', `${h}#film`, 'film'], ['Contact', home ? '#inquire' : `${r}contact.html`, 'inquire']];
   return `<!doctype html>
 <html lang="en" data-root="${r}">
 <head>
@@ -298,7 +299,7 @@ function servicesIndex() {
   const all = SERVICES.filter(s => V[s.slug]).map(s => ({ key: s.title, tag: s.eyebrow, v: V[s.slug], text: s.lead + ' ' + s.body[0].split('. ')[0] + '.', links: [s.slug] }));
   const body = `${roomsAct(r, all, (all.length * 0.55 + 0.4).toFixed(2), 'All services')}
 <section class="flow"><div class="wrap"><div class="head">${dock()}<h2 class="d-md">Everything we arrange</h2></div>
-<ul class="tags">${[`<a class="link" href="fleet.html">Yacht charters</a>`, ...SERVICES.map(s => `<a class="link" href="services/${s.slug}.html">${esc(s.title)}</a>`)].map(x => `<li>${x}</li>`).join('')}</ul></div></section>
+<ul class="tags">${[`<a class="link" href="fleet.html">Yacht charters</a>`, `<a class="link" href="tours.html">Tours &amp; prices</a>`, ...SERVICES.map(s => `<a class="link" href="services/${s.slug}.html">${esc(s.title)}</a>`)].map(x => `<li>${x}</li>`).join('')}</ul></div></section>
 ${inquiry(r)}`;
   write('services.html', layout({ title: 'Services in Cabo San Lucas · All In One Cabo', desc: 'Yachts, fishing, tours, helicopter rides, transportation, weddings, restaurants, nightlife, golf, events and video production in Cabo San Lucas.', body }));
 }
@@ -315,7 +316,7 @@ function servicePage(s) {
     <div class="head">${dock()}<h1 class="d-md">${esc(s.title)}</h1></div>
     <p class="mono">${esc(s.eyebrow)}</p>
     <p class="lede">${esc(s.lead)}</p>
-    <div class="hero__ctas"><a class="btn btn--accent" href="${WA(`Hi! I would like information about ${s.title}.`)}" target="_blank" rel="noopener">${I.wa}<span>Ask on WhatsApp</span></a></div>
+    <div class="hero__ctas"><a class="btn btn--accent" href="${WA(`Hi! I would like information about ${s.title}.`)}" target="_blank" rel="noopener">${I.wa}<span>Ask on WhatsApp</span></a>${s.slug === 'activities' ? `<a class="btn btn--line" href="${r}tours.html">Tours &amp; prices ${I.arrow}</a>` : ''}</div>
   </div></div>
 </section>
 <section class="flow flow--tight"><div class="wrap" data-sc-in data-sc-stagger="60">
@@ -329,6 +330,30 @@ ${s.packages ? `<section class="flow flow--tight"><div class="wrap"><h2 class="d
 ${s.properties ? s.properties.map(p => `<section class="flow flow--tight"><div class="wrap"><p class="mono">${esc(p.kind)}</p><h2 class="d-md" style="margin-top:.75rem">${esc(p.name)}</h2><p class="body" style="margin-top:1rem">${esc(p.text)}</p><div class="grid-3" style="margin-top:2rem">${p.lists.map(([t, l]) => `<div class="card"><h3 class="d-sm">${esc(t)}</h3><ul class="ticks">${l.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div><p style="margin-top:2rem"><a class="btn btn--accent" href="${WA(`Hi! I'm interested in ${p.name}.`)}" target="_blank" rel="noopener">${I.wa}<span>Get a quote</span></a></p></div></section>${mosaic(imgsOf(p.src), r, p.name)}`).join('') : mosaic(imgs, r, s.title)}
 ${inquiry(r, { preset: s.title })}`;
   write(`services/${s.slug}.html`, layout({ depth: 1, ogImage: v ? poster(v) : undefined, title: `${s.title} in Cabo San Lucas · All In One Cabo`, desc: `${s.lead} ${s.body[0]}`.slice(0, 158), body }));
+}
+
+function toursPage() {
+  const v = V.activities;
+  const all = TOURS.groups.flatMap(g => g.items);
+  const body = `<section class="page-hero" data-section="tours"><div class="page-hero__media"><video data-ambient src="${v}" poster="${poster(v)}" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video></div>
+  <div class="wrap"><div class="page-hero__plate"><div class="head">${dock()}<h1 class="d-md">Tours &amp; prices</h1></div>
+    <p class="lede">${all.length} tours and activities in Los Cabos: desert ranches, adventure parks, beach clubs, water sports and private sailing. Book any of them with us on WhatsApp.</p>
+    <p class="mono">Prices in USD · from $${Math.min(...all.map(t => t.price))}</p>
+    <nav class="tags" aria-label="Tour groups">${TOURS.groups.map(g => `<a class="link" href="#${g.key}">${esc(g.title)}</a>`).join('')}</nav>
+  </div></div></section>
+${TOURS.groups.map(g => `<section class="flow flow--tight" id="${g.key}"><div class="wrap">
+  <div class="head">${dock()}<h2 class="d-md">${esc(g.title)}</h2></div>
+  ${g.intro ? `<p class="body">${esc(g.intro)}</p>` : ''}
+  <ul class="tours">${g.items.map(t => `<li class="tour">
+    <div class="tour__info"><h3>${esc(t.name)}</h3>${t.detail ? `<p>${esc(t.detail)}</p>` : ''}</div>
+    <p class="tour__price"><b>$${t.price.toLocaleString('en-US')}</b><span>${esc(t.unit)}</span></p>
+    <a class="btn btn--line" href="${WA(`Hi! I would like to book: ${t.name} ($${t.price} USD ${t.unit}). Date: , guests: `)}" target="_blank" rel="noopener">Book</a>
+  </li>`).join('')}</ul>
+  ${g.notes ? `<p class="mono tours__notes">${esc(g.notes)}</p>` : ''}
+</div></section>`).join('\n')}
+<section class="flow flow--tight"><div class="wrap"><p class="body">Prices are subject to change and availability. Valid through December 2026.</p></div></section>
+${inquiry('', { preset: 'Activities & Tours' })}`;
+  write('tours.html', layout({ title: 'Tours & Activities with Prices in Cabo San Lucas · All In One Cabo', desc: `${all.length} tours in Los Cabos with prices: UTV and ATV, camel rides, ziplines, beach clubs, jet ski, eFoil, private sailing and whale watching.`, body }));
 }
 
 function contactPage() {
@@ -356,5 +381,5 @@ function notFound() {
   write('404.html', layout({ title: 'Page not found · All In One Cabo', desc: 'Page not found.', body: `<section class="page-hero"><div class="page-hero__media"><img src="${SEA.p}" alt=""></div><div class="wrap"><div class="page-hero__plate"><div class="head">${dock()}<h1 class="d-md">Lost at sea</h1></div><p class="lede">This page does not exist.</p><p><a class="btn btn--accent" href="index.html">Back to shore</a></p></div></div></section>` }));
 }
 
-home(); fleet(); YACHTS.forEach(yachtPage); servicesIndex(); SERVICES.forEach(servicePage); contactPage(); partnersPage(); notFound();
+home(); fleet(); YACHTS.forEach(yachtPage); servicesIndex(); SERVICES.forEach(servicePage); toursPage(); contactPage(); partnersPage(); notFound();
 console.log(`OK · ${YACHTS.length} yates · destacados ${FEATURED.length} · ${SERVICES.length} servicios`);
