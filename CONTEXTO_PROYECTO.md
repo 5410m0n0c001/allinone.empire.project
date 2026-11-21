@@ -49,9 +49,9 @@ Salo dijo que la 1a versión era peor que el Wix (perdió los videos a pantalla 
 - Página `tours.html` (nav "Tours"): 84 actividades en 6 grupos con **precio público total** y botón Book → WhatsApp. **Marca blanca: el proveedor NO aparece en la web.**
 - **Balances y margen NUNCA en el repo (es público).** Viven en `D:\allin1cabo_privado\Balances_All_In_One_Cabo.xlsx`: hojas Catálogo (lista, extras, balance, margen), Ventas (registro de cada venta, fórmulas), Resumen por proveedor, Grupos web, Condiciones.
 - Lógica: margen = precio lista − balance. "Extras" (entrada, transporte zona hotelera, seguro obligatorio) pasan directo al proveedor: se suman al precio web y al costo, sin margen.
-- Proveedores: Rancho San Cristóbal (RSC-), Wild Canyon (WC-), Wild Bay (WB-), Sailing Adventures/barcos (SA-), y **proveedor sin nombre de la lista de WhatsApp (PP-, pendiente)**.
+- Proveedores: Rancho San Cristóbal (RSC-), Wild Canyon (WC-), Wild Bay (WB-), Sailing Adventures/barcos (SA-), y **Cactus Tours** (PP-, cactustours.com; lista enviada por WhatsApp).
 - Cambiar precios: editar el Excel → `cd D:\allin1cabo_privado && node exportar_web.js` (escribe `src/tours.json`, solo datos públicos) → `npm run build` → publicar. `crear_excel.js` solo se usó para crearlo (no sobrescribe).
-- Supuestos a confirmar: proveedor PP: entrada $25 sumada a todo, por persona/pasajero; RSC "FULL PRICE → sólo % de comisión" (preguntar al RP); RSC-14 acompañante en pesca sin precio público (oculto en web).
+- Supuestos a confirmar: Cactus Tours (PP): entrada $25 sumada a todo, por persona/pasajero; RSC "FULL PRICE → sólo % de comisión" (preguntar al RP); RSC-14 acompañante en pesca sin precio público (oculto en web).
 
 ## Cómo se construye
 - `npm run scrape` → `_captura/catalogo_site.json` · `npm run media` → descarga/comprime medios + `_captura/media_map.json` · `npm run build` → genera el HTML (`node build.js`). `node src/pick-sea.js` = elección automática de foto con agua (referencia).
